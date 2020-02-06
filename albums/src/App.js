@@ -7,22 +7,20 @@
  */
 
 import React from 'react';
-// import {} from 'react-native';
+import {SafeAreaView} from 'react-native';
 
-import Header from './components/Header'
+import Header from './components/Header';
+import AlbumList from './components/AlbumList';
 
-// import {
-//   Header,
-//   LearnMoreLinks,
-//   Colors,
-//   DebugInstructions,
-//   ReloadInstructions,
-// } from 'react-native/Libraries/NewAppScreen';
-
-const App = () => {
-  return (
-    <Header title="Albums!" />
-  );
+class App extends React.Component{
+  render(){
+    return (
+      <SafeAreaView style={{marginBottom:60, borderWidth:5, borderColor:"steelblue"}}>
+        <Header title="Albums!" />
+        <AlbumList />
+      </SafeAreaView>
+    );
+  }  
 };
 
 // const styles = StyleSheet.create({});
